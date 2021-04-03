@@ -1,1 +1,2 @@
-django ==
+django =
+pillow==8.2.0

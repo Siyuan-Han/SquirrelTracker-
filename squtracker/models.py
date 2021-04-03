@@ -40,10 +40,11 @@ class Squirrel(models.Model):
         )
         
     #age choice   
-    ADULT='Adult'
+
+    #ADULT = 'ADULT'
     JUVENILE = 'Juvenile'
     AGE_CHOICES = (
-            (ADULT,'Adult'),
+           # (ADULT,'Adult'),
             (JUVENILE,'Juvenile'),
         )
 
@@ -110,9 +111,8 @@ class Squirrel(models.Model):
             help_text=_('Select if squirrel was foraging'),
             default=False,)
 
-    Other_Activities = models.CharField(
+    Other_Activities = models.TextField(
             help_text=_('Filling in other activity by squirrel'),
-            max_length=20,
             blank=True,)
 
     Kuks = models.BooleanField(
