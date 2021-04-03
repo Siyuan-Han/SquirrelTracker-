@@ -38,15 +38,13 @@ class Squirrel(models.Model):
     Date = models.DateField(
             help_text=_('Filling in date when squirrel was spotted',
         )
-        
-    #age choice   
+          
     ADULT='Adult'
     JUVENILE = 'Juvenile'
     AGE_CHOICES = (
             (ADULT,'Adult'),
             (JUVENILE,'Juvenile'),
-        )
-
+            ) 
     Age = models.CharField(
             help_text=_('Choose age from adult or juvenile'),
             choices = AGE_CHOICES,
@@ -54,16 +52,14 @@ class Squirrel(models.Model):
             max_length=20,
         )
     
-    #fur color choice
-    GRAY = 'Gray'
-    CINAMMON = 'Cinnamon'
+    GREY= 'Grey'
+    CINNAMON= 'Cinnamon'
     BLACK = 'Black'
-
-    FUR_COLOR = (
-            (GRAY, 'Gray'),
-            (CINAMMON, 'Cinnamon'),
-           (BLACK, 'Black'))
-
+    COLOR_CHOICES = (
+           (GREY,'Grey'),
+           (CINNAMON,'Cinnamon'),
+           (BLACK,'Black'),
+        )
     Primary_Fur_Color = models.CharField(
             help_text=_('Choose color form gray, cinnamon or black'),
             choices = FUR_COLOR,
@@ -74,10 +70,12 @@ class Squirrel(models.Model):
     GROUND_PLANE = 'Ground Plane'
     ABOVE_GROUND = 'Above Groud'
     
-    LOCATION= (
-            (GROUND_PLANE, 'Ground Plane'),
-            (ABOVE_GROUND, 'Above Groud'),
-          )
+    GROUND_PLANE = 'Ground Plane'
+    ABOVE_GROUND = 'Above Ground'
+    LOCATION_CHOICES =(
+           (GROUND_PLANE,'Ground Plane'),
+           (ABOVE_GROUND,'Above Ground'),
+           )
         
     Location = models.CharField(
             help_text=_('Choose location from ground plane or above ground'),
