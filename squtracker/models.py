@@ -36,11 +36,11 @@ class Squirrel(models.Model):
         )
     
     Date = models.DateField(
-            help_text=_('Filling in date when squirrel was spotted',
+            help_text=_('Filling in date when squirrel was spotted'),
         )
 
           
-    ADULT='Adult'
+    ADULT = 'Adult'
     JUVENILE = 'Juvenile'
     AGE_CHOICES = (
             (ADULT,'Adult'),
@@ -56,7 +56,7 @@ class Squirrel(models.Model):
     GREY= 'Grey'
     CINNAMON= 'Cinnamon'
     BLACK = 'Black'
-    COLOR_CHOICES = (
+    FUR_COLOR = (
            (GREY,'Grey'),
            (CINNAMON,'Cinnamon'),
            (BLACK,'Black'),
@@ -73,7 +73,7 @@ class Squirrel(models.Model):
     
     GROUND_PLANE = 'Ground Plane'
     ABOVE_GROUND = 'Above Ground'
-    LOCATION_CHOICES =(
+    LOCATION =(
            (GROUND_PLANE,'Ground Plane'),
            (ABOVE_GROUND,'Above Ground'),
            )
