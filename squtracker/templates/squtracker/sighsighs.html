@@ -2,9 +2,9 @@
 <html>
     <body>
 	<ul>
-        {% for sighting in sightings}
-	<li> {{sighting}}</li>
+        {% for squirrel in squirrels %}
+	<li><a href="{{squirrel.Unique_squirrel_ID}}/">{{squirrel.Unique_squirrel_ID}}</a></li>
 	{% endfor %}
-	<ul>
+	</ul>
     </body>
-<html>
+</html>
