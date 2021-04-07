@@ -1,7 +1,8 @@
-from django.shortcuts import render
-from django.shortcuts import redirect
+from django.shortcuts import render,redirect
+from django.shortcuts import HttpResponse
 from django.shortcuts import get_object_or_404
 from .models import Squirrel
+from .forms import SquForm
 
 def get_map(request):
     sightings= Squirrel.objects.all()[:100]
@@ -26,3 +27,30 @@ def detail(request,Unique_squirrel_ID):
 def mainpage(request):
     return render(request, 'squtracker/mainpage.html')
 
+def addsqu(request):
+    if request.method == "POST":
+        form= SquForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/squtracker/sightings')
+    else:
+        form = SquForm()
+    
+    context ={
+            'form':form,
+        }
+    return render(request,'squtracker/form.html',context)
+
+def updatesqu(request,Unique_squirrel_ID):
+    squirrel= Squirrel.objects.get(Unique_squirrel_ID=Unique_squirrel_ID)
+    if request.method =='POST':
+        form = SquForm(request.POST, instance = squirrel)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/squtracker/sightings')
+    else:
+        form = SquForm(instance=squirrel)
+    context ={
+            'form':form,
+             }
+    return render(request, 'squtracker/form.html', context)

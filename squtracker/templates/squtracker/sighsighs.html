@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
     <body>
+	<a href="add/">Add a new squirrel</a>
 	<ul>
         {% for squirrel in squirrels %}
 	<li><a href="{{squirrel.Unique_squirrel_ID}}/">{{squirrel.Unique_squirrel_ID}}</a></li>
 	{% endfor %}
 	</ul>
+	<a href="/squtracker">Go Back To Main Page</a>
     </body>
 </html>
