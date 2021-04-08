@@ -18,12 +18,9 @@ def get_sightings(request):
                }
     return render(request, 'squtracker/sighsighs.html', context)
 
-def detail(request,Unique_squirrel_ID):
-    squirrel = get_object_or_404(Squirrel, pk =Unique_squirrel_ID)
-    context ={
-              'squirrel':squirrel,
-               }
-    return render(request, 'squtracker/squdetail.html', context)
+def get_stats(request):
+    return render(request, 'squtracker/stats.html')
+
 def mainpage(request):
     return render(request, 'squtracker/mainpage.html')
 
@@ -54,3 +51,5 @@ def updatesqu(request,Unique_squirrel_ID):
             'form':form,
              }
     return render(request, 'squtracker/form.html', context)
+
+
