@@ -122,7 +122,7 @@ button:hover {
 /*--//wrapper--*/
 
 .w3l-coming-soon-page {
-  background: url(squ.jpg) no-repeat center;
+  background: url(../images/squ.jpg) no-repeat center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;

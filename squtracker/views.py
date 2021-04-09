@@ -22,7 +22,7 @@ def get_stats(request):
     return render(request, 'squtracker/stats.html')
 
 def mainpage(request):
-    return render(request, 'squtracker/mainpage.html')
+    return render(request, 'squtracker/mainpage1.html')
 
 def addsqu(request):
     if request.method == "POST":

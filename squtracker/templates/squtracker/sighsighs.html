@@ -1,13 +1,55 @@
 <!doctype html>
 <html>
     <body>
-	<a href="add/">Add a new squirrel</a>
-	<a href="/squtracker">Go Back To Main Page</a>
-	<a href="/squtracker/sightings/stats/">Go To Stats Page</a>
-	<ul>
-        {% for squirrel in squirrels %}
-	<li><a href="{{squirrel.Unique_squirrel_ID}}/">{{squirrel.Unique_squirrel_ID}}</a></li>
-	{% endfor %}
-	</ul>
-    </body>
+        <head>
+                <title>Squirrel Sightings</title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        </head>
+        <body>
+<style>
+      body {
+        padding-left: 10px; padding-right: 10px;
+      }
+</style>
+                <a href="add/">Add a new squirrel</a>
+                <a href="/squtracker">Go Back To Main Page</a>
+                <a href="/squtracker/sightings/stats/">Go To Stats Page</a>
+                <p>
+		    <h2>Squirrel sightings</h2>
+                </p>
+                <p>
+		   Click Squirrel Id to Update
+                </p>
+                <br>
+                <div>
+                <table class="table">
+                       
+                        <thead class = "thead-light">
+                                <tr>
+                                        <th scope = "col">Unique Squirrel Id</th>
+                                        <th scope = "col">Latitude</th>
+                                        <th scope = "col">Longitude</th>
+                                        <th scope = "col">Date</th>
+                                        <th scope = "col">Age</th>
+					<th scope = "col">Shift</th>
+                                </tr>
+                        </thead>
+
+                        <tbody>
+                        {% for squirrel in squirrels %}
+                                <tr>
+					<td><a href="{{squirrel.Unique_squirrel_ID}}/">{{squirrel.Unique_squirrel_ID}}</a></td>
+                                        <td>{{ squirrel.Y }}</td>
+                                        <td>{{ squirrel.X }}</td>
+                                        <td>{{ squirrel.Date }}</td>
+                                        <td>{{ squirrel.Age}}</td>
+					<td>{{ squirrel.Shift}}</td>
+                                </tr>
+                        {% endfor %}
+                        </tbody>
+                </table>
+                </div>
+                <br>
+                <br>
+        </body>
 </html>
