@@ -25,6 +25,10 @@
   </head>
   <body>
     <a href = "/squtracker/">Go back to main page</a>
+    <p>
+		<strong><h2 align="center"> <img src="https://www.emojiall.com/images/svg/google/emoji_u1f43f.svg" style="width:60px" class="rounded" alt="..." >Squirrel Map <img src="https://www.emojiall.com/images/svg/google/emoji_u1f43f.svg" style="width:60px" class="roun
+ded" alt="..." ></strong></h2>
+		</p>
     <div id="map" class="container-fluid h-100"></div>
 
     <!-- Optional JavaScript -->
@@ -51,10 +55,18 @@
         <!-- L.Icon.Default.prototype.options.iconAnchor = [0, 0]; -->
         <!-- L.Icon.Default.prototype.options.shadowSize = 15; -->
         <!-- L.Icon.Default.prototype.options.shadowAnchor = [0, 0]; -->
+    <!-- change icon type -->
+        var New_Icon = new L.Icon({
+	    iconUrl: 'https://tastyacgn.net/image/cropped-ICON.png',
+	    iconSize: [25, 25],
+	    iconAnchor: [10, 10],
+	    popupAnchor: [-20, -20],
+	});
 
         {% for sighting in sightings %}
           var point_lat_lon = [{{ sighting.Y }}, {{ sighting.X }}];
-          var marker = L.marker(point_lat_lon).addTo(map);
+          var marker = L.marker(point_lat_lon, {icon:New_Icon}).addTo(map);
+
         {% endfor %}
     </script>
   </body>
