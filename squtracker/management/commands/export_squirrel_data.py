@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 
 import csv
   
-from tracker_app.models import Squirrel
+from squtracker.models import Squirrel
 class Command(BaseCommand):
         def add_arguments(self, parser):
             parser.add_argument('csv_file')
