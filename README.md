@@ -1,6 +1,6 @@
 # Welcome to SquirrelTracker
-
-This web application is a project for Tools for analytics Spring 2021. 
+  
+This web application is a project for Tools for analytics Spring 2021.
  SquirrelTracker is a Web application based on Django framework and  deployed by Google Cloud Server.
  Here is link for the application : https://tools-of-analytics-303509.df.r.appspot.com/squtracker/
 
