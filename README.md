@@ -1,9 +1,8 @@
 # Welcome to SquirrelTracker
   
-This web application is a project for Tools for analytics Spring 2021.
- SquirrelTracker is a Web application based on Django framework and  deployed by Google Cloud Server.
- Here is link for the application : https://tools-of-analytics-303509.df.r.appspot.com/squtracker/
- Notice:
+ This web application is a project for Tools for analytics Spring 2021. SquirrelTracker is a Web application based on Django framework and  deployed by Google Cloud Server. Here is link for the application : https://tools-of-analytics-303509.df.r.appspot.com/squtracker/  
+   
+ **Notice**:  
  During our testing, we find maybe because of the instability of the platform, when we just click the link, our webpage may have this error: Internal Server Error.
  When you find this error, you just need to refresh the webpage several times.
 
