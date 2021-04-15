@@ -10,7 +10,7 @@ This web application is a project for Tools for analytics Spring 2021.
 
 ## Group info
 -    **Siyuan Han** and **Yue Ma**
--    Project Group 16
+-    Project Group 16 （IEOR 4501 Spring 2021）
 -    UNIs: sh4156, ym2762
 
 ## Functions
