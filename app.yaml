@@ -1,18 +1,1 @@
-runtime: python37
-  
-handlers:
-- url: /static
-  static_dir: collected-static/
-- url: /.*
-  script: auto
-
-
-env_variables:
-    INSTANCE_CONNECTION_NAME: 'celtic-hub-302416:asia-east1:adopt'  # eg. 'ieor-tools-for-analytics:asia-east1:adopt'
-    PGDATABASE: 'postgres'
-    PGUSER: 'postgres'
-    PGPASSWORD: '3Cxf4ilMtOFNqaNH'
-    SECRET_KEY: '!$0_9w1gesgfbfvab5zaq-7q$qv4yo@)#7kibnzl$$=99*3eh&'
-    DEBUG: 'false'
-    GS_BUCKET_NAME: 'celtic-hub-302416.appspot.com'  # eg. 'ieor-tools-for-analytics.appspot.com'
-    GOOGLE_APPLICATION_CREDENTIALS: 'service-account-key.json'  # eg. 'service-account-key.json'
+ccc
